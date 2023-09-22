@@ -22,10 +22,11 @@
 */
 
 //CODE HERE
+
 const greetUser = (unsername) => {
     return `Welcome back, ${username}`
 }
-console.log(greetUser(username))
+
 
 
 
@@ -53,6 +54,15 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 
+//const canWeDeliver = (zipCode) => {
+//for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
+    //if (deliveryAreaZipCodes[i] === 85209) {
+        //return `You're in our delivery zone!`
+    //}
+//}
+//return `Sorry, we can't deliver to that address`
+//}
+//console.log(canWeDeliver())
 
 
 /* 
@@ -73,7 +83,14 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+const canWeDeliver = (zipCode) => { 
+    if (deliveryAreaZipCodes.includes(86205)) {
+        return `You're in our delivery zone!`
+    } else {
+        return `Sorry, we can't deliver to that address`
+    }
 
+}
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -109,7 +126,9 @@ const deals = [
 */
 
 //CODE HERE
-
+let newDealTitle = `15% Off!`
+newDeal = newDealTitle.replace("15%", "10%" )
+console.log(newDeal)
 
 
 /*
@@ -126,3 +145,7 @@ const deals = [
 */
 
 //CODE HERE
+
+let oldDate = "This deal lasts until the end of March!"
+newDate = oldDate.replace("March", "April")
+console.log(newDate)
