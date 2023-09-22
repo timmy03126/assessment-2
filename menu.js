@@ -100,7 +100,7 @@ console.log(category)
 */
 
 //CODE HERE
-let foodArr = [{name: `Snack`}, {price: 10}, {popularity: 5}, {rating: 9}, {tags: [`chip`, `crunchy`]}]
+let foodArr = [{name: `Chips`, price: 10, popularity: 5, rating: 9, tags: `crunchy`}, {name: `Pretzels`, price: 8, popularity: 4, rating: 7, tags: `crunchy`},{name: `Chocolate`, price: 13, popularity: 8, rating: 10, tags: `sweet`}, {name: `Nuts`, price: 4, popularity: 6, rating: 7, tags: `crunchy`}, {name: `Pudding`, price: 11, popularity: 10, rating: 10, tags: `sweet`},]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -117,7 +117,18 @@ let foodArr = [{name: `Snack`}, {price: 10}, {popularity: 5}, {rating: 9}, {tags
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+function crunchyTagsArr(tagsArr) {
+    let filiteredTagsArray = tagsArr.filter((tag) => {
+        return tag.tags === `crunchy`
+    })
+    return filiteredTagsArray
+}        
+ 
+console.log(crunchyTagsArr(foodArr))
+
+
+ 
+
 
 
 
