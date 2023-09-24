@@ -170,9 +170,15 @@ console.log(crunchyTagsArr(foodArr))
     
     Return the filtered array from the entire function
 */
-
+console.log(`------------`)
 //CODE HERE
 
+const filterByProperty = foodArr.filter((popularity, number, type) => {
+    if (popularity > 7) {
+        return filterByProperty
+    }
+})
+console.log(filterByProperty)
 
 /*
     Invoke the `filterByProperty` function passing

@@ -35,8 +35,10 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+const summedPrice = cart.reduce((acc, curr) => {
+    return  acc + curr.price
+}, 0)
+console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -55,6 +57,9 @@ const cart = [
 
 //CODE HERE
 
+const calcFinalPrice = (carTotal, couponValue, tax) => {
+   return carTotal + tax - couponValue
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -79,7 +84,7 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+The customer will need to put in their first and last name so the restaurant can add these to the order. The restaurant will also need to put in the items that they want to order and whether or not the customer will want utensils or not.
 */
 
 /*
@@ -88,3 +93,9 @@ const cart = [
 */
 
 //CODE HERE
+const customerCart = {
+    firstName : "Timothy",
+    lastName : "Childs",
+    foodItem : "Bread",
+    utensils : "Yes",
+};
