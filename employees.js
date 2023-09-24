@@ -20,7 +20,14 @@
 */
 
 //CODE HERE
+class Employee {
+    constructor(name, shifts){
 
+    }
+    getSchedule() {
+        console.log(name + `works on` + shifts)
+    }
+}
 
 
 /*
@@ -34,14 +41,14 @@
 */
 
 //CODE HERE
-
+let empOne = new Employee( `Jess`, `weekday mornings, weekday afternoons`)
 /*
     Call the `getSchedule` method on the
     `empOne` object.
 */
 
 //CODE HERE
-
+empOne.getSchedule()
 
 /*
     Make a copy of the empOne object
@@ -56,7 +63,7 @@
 */
 
 //CODE HERE
-
+let empTwo = {...empOne, name:`Nick`}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -83,7 +90,18 @@
 */
 
 //CODE HERE
+class Manager extends Employee {
+    constructor(name, shifts, employees) {
 
+    }
+
+    getEmployees() {
+        console.log(name + `manages` + employees)
+    }
+    addEmployee(emp) {
+        employees.push(emp)
+    }
+}
 
 
 /*
@@ -98,7 +116,7 @@
 */
 
 //CODE HERE
-
+let manager = new Manager(`Winston`, `weekday mornings, weekday afternoons`, `Cece and Schmidt`)
 
 /*
     Call the `getEmployees` method on the
@@ -106,7 +124,7 @@
 */
 
 //CODE HERE
-
+manager.getEmployees()
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
@@ -114,7 +132,7 @@
 */
 
 //CODE HERE 
-
+manager.addEmployee(`Coach`)
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -122,3 +140,4 @@
 */
 
 //CODE HERE
+manager.getEmployees()
